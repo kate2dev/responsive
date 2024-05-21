@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./indext.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body class="bg-yellow-500 h-dvh p-20 flex justify-center items-center">
+    <main class="w-[36rem] lg:w-[40rem] m-20">
+      <form id="form" onsubmit="bmi_calc(event)"
+        class="flex flex-col px-4 items-center h-fit gap-4 bg-white p-5"
+        action=""
+      >
+        <h1 class="text-xl font-bold">CALCULATE YOUR BMI</h1>
+
+        <div class="flex lg:w-fit justify-between items-center gap-8">
+          <div class="input flex flex-col lg:w-full">
+            <label for="height" class="font-semibold">Height</label>
+            <input id="height"
+              type="number"
+              name="height"
+              id="height"
+              placeholder="centimeter"
+              class="border border-slate-500 rounded-md w-[10rem] lg:w-full p-1 mt-2"
+            />
+          </div>
+
+          <div class="input flex flex-col lg:w-full">
+            <label for="weight" class="font-semibold">Weight</label>
+            <input
+              type="number"
+              name="weight"
+              id="weight"
+              placeholder="kilogram"
+              class="border border-slate-500 rounded-md w-[10rem]  lg:w-full p-1 mt-2"
+            />
+          </div>
+        </div>
+
+        <button id="calculate"
+          class="py-1 px-4 text-white font-semibold bg-slate-700 rounded-md mt-8"
+          type="submit"
+        >
+          CALCULATE
+        </button>
+
+        <div
+          class="result bg-slate-700 w-full text-center mx-4 py-2 text-white rounded-md"
+        >
+          <h2 id="BMI">Your BMI is..... <span id="result"></span></h2>
+        </div>
+        <!-- <h2>You are <span id="status">Normal</span></h2> -->
+      </form>
+    </main>
+  </body>
+</html>
